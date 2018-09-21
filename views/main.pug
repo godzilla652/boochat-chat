@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(href="style/bootstrap.css" rel="stylesheet")
+  link(href="style/main.css" rel="stylesheet")
+  title #{title}
+body
+  #greetWrapper
+    #greet
+      #mess
+      h1.centered
+        span.tone1 Boo
+        span.tone2 Chat
+      hr
+      form(method="post", action="/check")
+        .form-group
+          label(for="login") Login
+          input.myinput.form-control(type="text" name="login" required)
+        .form-group
+          label(for="password") Password
+          input.form-control(type="text" name="password" required)
+          input(type="hidden" name="create")
+        #message #{message}
+        .register-buttons
+          button#login.btn.btn-success.mybtn Login/Create
+script(src="scripts/main.js" type="text/javascript")
